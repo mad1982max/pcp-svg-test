@@ -74,19 +74,12 @@ function mouseOverFloor() {
 }
 
 function clickBack() {
-    console.log('**b**');
-    //window.history.go(-1)
-    //document.location.href="../../index.html";
-    //window.location.pathname = "../../index.html";
     setTimeout(function(){document.location.href = `../../index.html?v=${01}`},250);
 }
 
 function clickFloor(e) {
     let level = e.target.id;
     console.log('goTo: ', level);
-    //window.location.href = `../levels/SITEMAP.html?level=${level}`; 
-    //document.location.href = `../levels/SITEMAP.html?level=${level}`;
-    // setTimeout(function(){document.location.href = `../levels/sitemap.html?level=${level}`},250);
     setTimeout(function(){document.location.href = `../levels/sitemap.html?level=${level}`},250);
-    //window.open(`../levels/SITEMAP.html?level=${level}`, "_self")
+
 }
