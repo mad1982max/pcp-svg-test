@@ -1,9 +1,8 @@
 let header, footer, container;
 let firstZoom = true;
-
+let currentRatio;
 let level, floorSrc, coverSrc, headerFooterHeight, wHeight, set1, wWidth, cover, set, svg, svgHeight, floorLayer, mainLayer;
 let currentScale;
-let oldWidth, oldHeight, oldRatio, translateCurrent, scaleCurrent, ratioWH;
 let setFlagObj = {
     cover: false,
     set1: false,
@@ -30,6 +29,7 @@ function onloadFn() {
     footer = document.querySelector(".footer");
     container = document.getElementById('container');
     window.addEventListener("resize", resize);
+    currentRatio = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth/3000;
     resize();
     buildSvg();
     buildDefault();
@@ -41,6 +41,7 @@ function getScreenWidthHeight() {
     wHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     svgHeight = wHeight - headerFooterHeight;
+    
 }
 
 
@@ -48,6 +49,14 @@ function resize() {
     getScreenWidthHeight();
     container.style.height = `${svgHeight}px`;
     container.style.width = `${wWidth}px`;
+
+
+    if(mainLayer) {
+        mainLayer
+        .attr("transform", `scale(${wWidth/3000})`) 
+    }
+
+    
 }
 
 function buildDefault() {
@@ -85,14 +94,7 @@ function buildSvg() {
     svg.call(zoom);
 
     
-}
-
-
-
-
-
-
-    
+}   
 
 
 
@@ -123,7 +125,7 @@ function drawSet(itemToShow, isChecked) {
         .attr("cursor", "pointer")
         .attr("id", d => d.id)
         .append("circle")
-            .attr("fill", "red")
+            .attr("fill", "green")
             .attr("cx", d => {
                 return d.x
             })
@@ -177,24 +179,14 @@ function drawCover(itemToShow, isChecked) {
 
 
 function zoomed() {
-    let addRatio;
-    if(firstZoom) {
-        let {translate, scale} = d3.transform(mainLayer.attr("transform"));
-        console.log('**scale', scale[0]);
-        addRatio = scale[0];
-        firstZoom = false;
-    } else {
-        addRatio = 1
-    }
     
 
 
     const {transform} = d3.event;    
     let {k,x,y} = transform;
-    console.log('k*addRatio', k*addRatio);
     var transform2 = d3Transform()
         .translate([x, y])
-        .scale(k*addRatio);
+        .scale(k*wWidth/3000);
     mainLayer.attr("transform", transform2);    
 }
 
