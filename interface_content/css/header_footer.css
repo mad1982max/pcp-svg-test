@@ -1,0 +1,156 @@
+
+@font-face {
+    font-family: OstrichSans-Black;
+    src: url('../fonts/OstrichSans-Black.otf');
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(226, 222, 222);
+}
+
+img {
+    width: 100%; 
+}
+
+.header {
+    background:rgb(252, 252, 252);
+    font-size: 25px;
+    font-family: OstrichSans-Black;
+}
+
+.btn-menu {
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.dropdown-menu {
+    background: rgb(53, 51, 51); 
+    padding: 0;
+    min-width: 80px !important; 
+ 
+}
+
+.dropdown-item {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgb(90, 90, 90);
+}
+
+.footer {
+    background: #000;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 7px;
+    font-size: 18px;
+    font-family: OstrichSans-Black;
+    margin: 0;
+    line-height: 100%;    
+}
+
+.logo {
+    color: aliceblue; 
+}
+
+button, 
+button:active, 
+button:focus, a.btn {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.logoC {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px aliceblue solid;
+    bottom: 3px;
+    padding-bottom: 0px;
+}
+
+@media (min-width: 479px) {
+    .dropdown-menu {
+        min-width: 100px !important;   
+    }   
+    
+    .dropdown-item {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .header {
+        font-size: 28px;
+    }
+    
+    .btn-menu {
+        font-size: 23px;
+    }
+
+    .by {
+        font-size: 14px;
+        top: -2px;
+    }
+   
+    .footer {
+        padding: 5px;
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px){
+
+    .dropdown-menu {
+        min-width: 115px !important;   
+    }   
+    
+    .dropdown-item {
+        padding: 6px;
+        font-size: 20px;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+    
+    .footer {
+        padding: 5px;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .btn-menu {
+        font-size: 24px;
+    }
+
+    .by {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 991px){
+
+    .header {
+        font-size: 32px;
+    }
+    
+    .btn-menu {
+        font-size: 25px;
+    }
+
+    .by {
+        font-size: 18px;
+        top: -3px;
+    }
+
+    .footer {
+        padding: 6px;
+        font-size: 26px;
+    }
+}

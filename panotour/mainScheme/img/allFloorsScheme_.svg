@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svgFloor"
+   width="2133.3333"
+   height="1600"
+   viewBox="0 0 2133.3333 1600"
+   sodipodi:docname="allFloorsScheme_.svg">
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1664"
+     inkscape:window-height="877"
+     id="namedview48"
+     showgrid="false"
+     inkscape:zoom="0.46265627"
+     inkscape:cx="825.66695"
+     inkscape:cy="627.08545"
+     inkscape:window-x="14"
+     inkscape:window-y="10"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g18" />
+
+  <defs
+     id="defs14" />
+  <g
+     inkscape:label="Image"
+     id="g18"
+     inkscape:groupmode="layer"
+     style="display:inline">
+    <image
+      y="-50.060242"
+      x="-5.7831326"
+      width="2133.3333"
+      height="1600"
+      id="image20"
+      xlink:href = "./allFloorsScheme_.png" />
+       <a
+         transform="matrix(1.0091185,0,0,1,-2.5429399,1.9277108)">
+      <rect
+         pointer-events = "visible"
+         class="block"
+         id="level_22"
+         style="fill:none;fill-rule:evenodd"
+         width="634.21686"
+         height="379.75903"
+         x="67.469879"
+         y="281" />
+    </a>
+    <a
+         transform="matrix(1.0091185,0,0,1,1344.927,0.96386776)">
+      <rect
+         pointer-events = "visible"
+         class="block"
+         id="level_47"
+         y="281"
+         x="67.469879"
+         height="379.75903"
+         width="634.21686"
+         style="fill:none;fill-rule:evenodd" />
+    </a>
+    <a
+         transform="matrix(1.0091185,0,0,1,1342.9992,452.0482)">
+      <rect
+         pointer-events = "visible"
+         class="block"
+         id="level_37"
+         style="fill:none;fill-rule:evenodd"
+         width="634.21686"
+         height="379.75903"
+         x="67.469879"
+         y="281" />
+    </a>
+    <a         
+         transform="matrix(1.0091185,0,0,1,-4.4706314,450.12049)">
+      <rect
+         pointer-events = "visible"
+         class="block"
+         id="level_27"
+         y="281"
+         x="67.469879"
+         height="379.75903"
+         width="634.21686"
+         style="fill:none;fill-rule:evenodd" />
+    </a>
+  </g>
+</svg>

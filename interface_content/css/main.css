@@ -1,0 +1,95 @@
+@font-face {
+    font-family: OstrichSans-Black;
+    src: url('../fonts/OstrichSans-Black.otf');
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: rgb(253, 253, 253);
+    opacity: 0;
+    transition: opacity 500ms;
+    overflow: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainRow {
+    border-top: 2px solid black;
+}
+
+img {
+    width: 100%;
+    transition: transform 500ms;
+}
+
+.main {
+    max-width: 991px;
+    background: rgb(253, 253, 253);
+}
+
+.wrapperObject {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.wrapperBGObject {
+    border: 1px solid black;
+    border-bottom: none;
+    overflow: hidden;
+}
+
+.main-title {
+    font-size: 18px;
+}
+
+.wrapperObject:hover {
+    cursor: pointer;
+}
+
+.wrapperObject:hover img {
+    transform: translate(0, -10px) scale(1.2);
+}
+
+.title {
+    border: 1px solid black;
+    border-top: none;
+    background: rgb(253, 253, 253);
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(15, 36, 44);
+}
+
+.imgGrey {
+    filter: grayscale(100%);
+}
+
+.footer {
+    position: static;
+}
+
+@media (min-width: 479px) {
+    .main-title {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .main-title {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 991px) and (min-height: 921px) {
+    .footer {
+        position: absolute;
+    }
+}
