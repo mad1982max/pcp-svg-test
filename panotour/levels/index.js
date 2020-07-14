@@ -91,9 +91,7 @@ function buildSvg() {
     .scaleExtent([0.2, 3])
     .on("zoom", zoomed);
 
-    svg.call(zoom);
-
-    
+    svg.call(zoom);    
 }   
 
 
@@ -125,14 +123,14 @@ function drawSet(itemToShow, isChecked) {
         .attr("cursor", "pointer")
         .attr("id", d => d.id)
         .append("circle")
-            .attr("fill", "green")
+            .attr("fill", "red")
             .attr("cx", d => {
                 return d.x
             })
             .attr("cy", d => {
                 return (d.y + 165)
             })
-            .attr("r", 40)
+            .attr("r", 30)
             .on("click", clickedOnPin)        
 
         set
@@ -147,7 +145,7 @@ function drawSet(itemToShow, isChecked) {
             return (d.y + 165)
         })
         .attr("text-anchor", "middle")
-        .attr("font-size", 38)
+        .attr("font-size", 30)
         .attr("fill", "white")
         .attr("font-family", "sans-serif")
         .attr("dy", "10")
