@@ -177,8 +177,6 @@ function drawCover(itemToShow, isChecked) {
 
 
 function zoomed() {
-    
-
 
     const {transform} = d3.event;    
     let {k,x,y} = transform;

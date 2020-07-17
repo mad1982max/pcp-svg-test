@@ -9,93 +9,59 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   id="svgFloor"
-   width="2133.3333"
-   height="1600"
-   viewBox="0 0 2133.3333 1600"
-   sodipodi:docname="allFloorsScheme_.svg">
-  <sodipodi:namedview
-     inkscape:document-rotation="0"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1664"
-     inkscape:window-height="877"
-     id="namedview48"
-     showgrid="false"
-     inkscape:zoom="0.46265627"
-     inkscape:cx="825.66695"
-     inkscape:cy="627.08545"
-     inkscape:window-x="14"
-     inkscape:window-y="10"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="g18" />
+   viewBox="0 0 1500 800"
+   id="svgFloor">
 
   <defs
      id="defs14" />
-  <g
-     inkscape:label="Image"
-     id="g18"
-     inkscape:groupmode="layer"
-     style="display:inline">
+  <g 
+     id="g18">
     <image
-      y="-50.060242"
-      x="-5.7831326"
-      width="2133.3333"
-      height="1600"
+      class = "floor"
       id="image20"
-      xlink:href = "./allFloorsScheme_.png" />
-       <a
-         transform="matrix(1.0091185,0,0,1,-2.5429399,1.9277108)">
+      xlink:href = "./allFloorsScheme.png" />
+       <a>
       <rect
          pointer-events = "visible"
          class="block"
          id="level_22"
          style="fill:none;fill-rule:evenodd"
-         width="634.21686"
-         height="379.75903"
-         x="67.469879"
-         y="281" />
+         width="449"
+         height="265"
+         x="50"
+         y="179" />
     </a>
-    <a
-         transform="matrix(1.0091185,0,0,1,1344.927,0.96386776)">
+    <a>
       <rect
          pointer-events = "visible"
          class="block"
          id="level_47"
-         y="281"
-         x="67.469879"
-         height="379.75903"
-         width="634.21686"
+         y="179"
+         x="998"
+         height="265"
+         width="449"
          style="fill:none;fill-rule:evenodd" />
     </a>
-    <a
-         transform="matrix(1.0091185,0,0,1,1342.9992,452.0482)">
+    <a>
       <rect
          pointer-events = "visible"
          class="block"
          id="level_37"
          style="fill:none;fill-rule:evenodd"
-         width="634.21686"
-         height="379.75903"
-         x="67.469879"
-         y="281" />
+         width="449"
+         height="265"
+         x="997"
+         y="494" />
     </a>
-    <a         
-         transform="matrix(1.0091185,0,0,1,-4.4706314,450.12049)">
+    <a>
       <rect
          pointer-events = "visible"
          class="block"
          id="level_27"
-         y="281"
-         x="67.469879"
-         height="379.75903"
-         width="634.21686"
+         y="495"
+         x="51"
+         height="266"
+         width="447"
          style="fill:none;fill-rule:evenodd" />
     </a>
   </g>

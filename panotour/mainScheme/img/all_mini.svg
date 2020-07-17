@@ -10,87 +10,58 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svgFloor"
-   width="1300"
-   height="1700"
-   viewBox="50 -80 1300 1700"
+   viewBox="0 0 600 800"
    sodipodi:docname="small_levels3.png">
-  <sodipodi:namedview
-     inkscape:document-rotation="0"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1664"
-     inkscape:window-height="877"
-     id="namedview48"
-     showgrid="false"
-     inkscape:zoom="0.46265627"
-     inkscape:cx="825.66695"
-     inkscape:cy="627.08545"
-     inkscape:window-x="14"
-     inkscape:window-y="10"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="g18" />
   <defs
      id="defs14" />
    <g
-      inkscape:label="Image"
-      id="g18"
-      inkscape:groupmode="layer"
-      style="display:inline">
+      id="g18">
       <image
-         y="0"
-         x="0"
-         width="1400"
-         height="1600"
+         class = "floor"
          id="image20"
          xlink:href = "./small_levels3.png" />
-      <a transform="matrix(1,0,0,1,-2.55,2)">
+      <a>
          <rect
          pointer-events = "visible"
          class="block"
          id="level_22"
          style="fill:none;fill-rule:evenodd"
-         width="564"
-         height="336"
-         x="688"
-         y="42" />
+         width="283"
+         height="168"
+         x="292"
+         y="23" />
       </a>
-      <a transform="matrix(1,0,0,1,-2.55,2)">
+      <a>
          <rect
          pointer-events = "visible"
          class="block"
          id="level_27"
-         y="430"
-         x="688"
-         width="570"
-         height="336"
+         y="217"
+         x="295"
+         width="283"
+         height="168"
          style="fill:none;fill-rule:evenodd" />
       </a>
-      <a transform="matrix(1,0,0,1,-2.55,2)">
+      <a>
          <rect
          pointer-events = "visible"
          class="block"
          id="level_37"
-         y="823"
-         x="688"
-         width="566"
-         height="336"
+         y="412"
+         x="292"
+         width="283"
+         height="168"
          style="fill:none;fill-rule:evenodd" />
       </a>
-      <a transform="matrix(1.0091185,0,0,1,-4.4706314,450.12049)">
+      <a>
          <rect
          pointer-events = "visible"
          class="block"
          id="level_47"
-         y="768"
-         x="675"
-         width="570"
-         height="336"
+         y="610"
+         x="289"
+         width="285"
+         height="168"
          style="fill:none;fill-rule:evenodd" />
       </a>
    </g>

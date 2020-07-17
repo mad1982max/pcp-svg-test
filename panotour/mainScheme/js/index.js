@@ -1,4 +1,8 @@
-let svg, floorRect, headerFooterHeight, obj;
+let svg, floorRect, headerFooterHeight, obj, img;
+let header = document.querySelector('.header');
+let footer = document.querySelector('.footer');
+let myEfficientFn = debounce(resizeFn, 250);
+obj = document.getElementById('svg');
 
 window.onload = function() {
     resizeFn();
@@ -6,6 +10,19 @@ window.onload = function() {
         document.body.style.opacity = 0;
         myEfficientFn();
     });
+    obj.onload = function () {
+        let svgDocument = obj.contentDocument;
+        svg = svgDocument;
+        img = svgDocument.querySelector('.floor');
+        img.setAttribute("height", "100%")
+        img.setAttribute("width", "100%")
+        floorRect = [...svgDocument.querySelectorAll(".block")];
+        floorRect.forEach(singleBlock => {
+            singleBlock.addEventListener('click', clickFloor)
+            singleBlock.addEventListener('mouseenter', mouseOverFloor)
+            singleBlock.addEventListener('mouseleave', mouseLeave)
+        })
+    };
 }
 
 function debounce(func, wait, immediate) {    
@@ -22,43 +39,27 @@ function debounce(func, wait, immediate) {
         if (callNow) func.apply(context, args);        
     };    
 };
- 
 
-let myEfficientFn = debounce(resizeFn, 250);
-obj = document.getElementById('svg');
-
-obj.onload = function () {
-    let svgDocument = obj.contentDocument;
-    svg = svgDocument;
-    floorRect = [...svgDocument.querySelectorAll(".block")];
-    floorRect.forEach(singleBlock => {
-        singleBlock.addEventListener('click', clickFloor)
-        singleBlock.addEventListener('mouseenter', mouseOverFloor)
-        singleBlock.addEventListener('mouseleave', mouseLeave)
-    })
-};
 
 function resizeFn() {
     document.body.style.opacity = 0;
-    headerFooterHeight = document.querySelector('.header').offsetHeight + document.querySelector('.footer').offsetHeight;
+    headerFooterHeight = header.offsetHeight + footer.offsetHeight;
 
     let h = window.innerHeight || document.documentElement.clientHeight ||
         document.body.clientHeight;
-
     let w = window.innerWidth || document.documentElement.clientWidth ||
         document.body.clientWidth;
-
     if (w < 600) {
         obj.setAttribute('data', "./img/all_mini.svg")
     } else {
         obj.setAttribute('data', "./img/allFloorsScheme_.svg")
-    }
+    }   
 
-    let hwRatio = h / w;
-    let multer = hwRatio > 1.8 ? 0.7 : hwRatio <= 1 ? 1.2 : 0.8;
-    obj.style.height = `${h*multer - headerFooterHeight*multer}px`;
+    // let hwRatio = h / w;
+    // let multer = hwRatio > 1.8 ? 0.7 : hwRatio <= 1 ? 1.2 : 0.8;
+    let hSVG = h - headerFooterHeight;
+    obj.style.height = hSVG + "px";
     document.body.style.opacity = 1;
-
 }
 
 function mouseLeave() {
@@ -81,5 +82,4 @@ function clickFloor(e) {
     let level = e.target.id;
     console.log('goTo: ', level);
     setTimeout(function(){document.location.href = `../levels/sitemap.html?level=${level}`},250);
-
 }
