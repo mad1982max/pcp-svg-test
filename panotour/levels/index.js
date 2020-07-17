@@ -124,7 +124,7 @@ function drawSet(itemToShow, isChecked) {
         .attr("cursor", "pointer")
         .attr("id", d => d.id)
         .append("circle")
-            .attr("fill", "red")
+            .attr("fill", "green")
             .attr("cx", d => {
                 return d.x
             })
