@@ -31,8 +31,8 @@ function onloadFn() {
     window.addEventListener("resize", resize);
     currentRatio = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth/3000;
     resize();
-    buildSvg();
-    buildDefault();
+    buildSvg(buildDefault);
+    //buildDefault();
     document.body.style.opacity = 1;
 }
 
@@ -68,7 +68,7 @@ function buildDefault() {
     });
 }
 
-function buildSvg() {
+function buildSvg(fn) {
     svg = d3.select("#container").append("svg");
     svg
         .attr("height", "100%")
@@ -91,7 +91,8 @@ function buildSvg() {
     .scaleExtent([0.2, 3])
     .on("zoom", zoomed);
 
-    svg.call(zoom);    
+    svg.call(zoom);
+    fn();    
 }   
 
 
@@ -177,8 +178,9 @@ function drawCover(itemToShow, isChecked) {
 
 
 function zoomed() {
-
-    const {transform} = d3.event;    
+    
+    const {transform} = d3.event;  
+    console.log("d3.event", d3.event, transform);
     let {k,x,y} = transform;
     var transform2 = d3Transform()
         .translate([x, y])
