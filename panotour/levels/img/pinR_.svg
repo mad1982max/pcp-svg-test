@@ -7,9 +7,11 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="61"
+   width="47"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    version="1.1"
-   viewBox="0 0 64 64"
+   viewBox="0 0 18.8 24.4"
    sodipodi:docname="pinR_.svg"
    id="svg3873"><metadata
    id="metadata32">
@@ -26,19 +28,21 @@
 <defs
    id="defs30" />
 <sodipodi:namedview
+   scale-x="0.4"
+   width="15px"
    inkscape:current-layer="svg3873"
-   inkscape:window-maximized="1"
-   inkscape:window-y="-8"
-   inkscape:window-x="-8"
-   inkscape:cy="38.007594"
-   inkscape:cx="44.32419"
-   inkscape:zoom="4.5299028"
-   showborder="false"
+   inkscape:window-maximized="0"
+   inkscape:window-y="59"
+   inkscape:window-x="460"
+   inkscape:cy="35.352264"
+   inkscape:cx="32.037478"
+   inkscape:zoom="8.4884458"
+   showborder="true"
    inkscape:pagecheckerboard="true"
    showgrid="false"
    id="namedview28"
-   inkscape:window-height="987"
-   inkscape:window-width="1680"
+   inkscape:window-height="799"
+   inkscape:window-width="1213"
    inkscape:pageshadow="2"
    inkscape:pageopacity="0"
    guidetolerance="10"
@@ -50,7 +54,7 @@
 <title
    id="title2993">map pin</title>
 <g
-   transform="matrix(0.24696206,0,0,0.23533874,278.76029,-225.01605)"
+   transform="matrix(0.10553535,0,0,0.08917283,114.36491,-85.333089)"
    id="g3841">
   <path
      style="fill:#f41922;stroke:#5a0000;stroke-width:5.7"
