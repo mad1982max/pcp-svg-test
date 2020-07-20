@@ -90,24 +90,27 @@ function buildSvg() {
     mainLayer = svg.append('g');
     mainLayer
         .attr('class', 'mainLayer')
+        .attr("opacity", "0")
         .attr('transform', `scale(${curPos.k}) translate(${curPos.x},${curPos.y})`)        
 
     floorLayer = mainLayer.append('g')
     floorLayer
         .attr('class', 'floorLayer')
-
     let floor = floorLayer.append('image');
     floor.attr('class', 'currentFloor');
-    floor.attr('xlink:href', floorSrc);
     floor.on('load', () => {
-        console.log('***load');
         let checkBoxArr = [...document.querySelectorAll('.form-check-input')];
         checkBoxArr.forEach(box => {
         setFlagObj[box.id] = box.checked;    
         box.addEventListener('change', (e) => checkBoxListener(e.target.id, e.target.checked))
         checkBoxListener(box.id, box.checked);
-        });    
+        });       
     })
+    floor.attr('xlink:href', floorSrc)
+    mainLayer
+    .transition()
+    .duration(500)
+    .attr("opacity", "1")
 
     const zoom = d3
         .zoom()
