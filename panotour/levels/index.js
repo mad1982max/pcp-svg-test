@@ -1,14 +1,16 @@
 let header, footer, container;
-let firstZoom = true;
-let currentRatio;
 let level, floorSrc, coverSrc, headerFooterHeight, wHeight, set1, wWidth, cover, set, svg, svgHeight, floorLayer, mainLayer;
-let currentScale;
 let setFlagObj = {
     cover: false,
     set1: false,
     set2: false
 }
 let curPos = {
+    zoom: {
+        x:0,
+        y:0,
+        k:1
+    },
     x: 0,
     y: 0,
     initPicW: 3000,
@@ -30,13 +32,11 @@ function defineData4Floor() {
 }
 
 function onloadFn() {
-    defineData4Floor();
-    
+    defineData4Floor();    
     header = document.querySelector('.header');
     footer = document.querySelector('.footer');
     container = document.getElementById('container');
-    window.addEventListener('resize', resize);    
-    
+    window.addEventListener('resize', resize);
     buildSvg();
     resize();
     let checkBoxArr = [...document.querySelectorAll('.form-check-input')];
@@ -54,26 +54,23 @@ function getScreenWidthHeight() {
     wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     svgHeight = wHeight - headerFooterHeight;
 
-    if(wWidth > wHeight*curPos.initPicW/curPos.initPicH) {
+    if(wWidth > svgHeight*curPos.initPicW/curPos.initPicH) {
         curPos.k = svgHeight/curPos.initPicH;
-        let picW = curPos.initPicW*curPos.k;
-        curPos.x = (wWidth/curPos.k - picW/curPos.k)/2;
+        curPos.x = (wWidth/curPos.k - curPos.initPicW)/2;
         curPos.y = 0;
 
     } else {
         curPos.k = wWidth/curPos.initPicW
-        let picH = curPos.initPicH*curPos.k;
+        //curPos.x = (wWidth/curPos.k - curPos.initPicW)/2;
         curPos.x = 0;
-        curPos.y = 0;
-        curPos.y = (wHeight/curPos.k - picH/curPos.k)/5;;
-        
-    }
-      
-    console.log('curPos.k',curPos.k);   
+        curPos.y = (wHeight/curPos.k - curPos.initPicH)/5;        
+    }   
 }
 
 
 function resize() {
+    console.log('m', mainLayer.attr('transform'));
+
     getScreenWidthHeight();
     container.style.height = `${svgHeight}px`;
     container.style.width = `${wWidth}px`;
@@ -195,7 +192,7 @@ function zoomed() {
         .translate([x, y])
         .scale(k*curPos.k)
         .translate([curPos.x, curPos.y])
-    mainLayer.attr('transform', transform2);    
+    mainLayer.attr('transform', transform2);  
 }
 
 
