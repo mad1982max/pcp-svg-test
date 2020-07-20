@@ -5,7 +5,6 @@ let setFlagObj = {
     set1: false,
     set2: false
 }
-let resFlag = false;
 let curPos = {
     zoom: {
         x:0,
@@ -40,12 +39,14 @@ function onloadFn() {
     window.addEventListener('resize', resize);
     buildSvg();
     resize();
-    let checkBoxArr = [...document.querySelectorAll('.form-check-input')];
-    checkBoxArr.forEach(box => {
-    setFlagObj[box.id] = box.checked; 
-    checkBoxListener(box.id, box.checked);
-    box.addEventListener('change', (e) => checkBoxListener(e.target.id, e.target.checked))
-    });
+
+    // let checkBoxArr = [...document.querySelectorAll('.form-check-input')];
+    // checkBoxArr.forEach(box => {
+    // setFlagObj[box.id] = box.checked;    
+    // box.addEventListener('change', (e) => checkBoxListener(e.target.id, e.target.checked))
+    // checkBoxListener(box.id, box.checked);
+    // });
+    
     document.body.style.opacity = 1;
 }
 
@@ -58,7 +59,6 @@ function getScreenWidthHeight() {
 
 
 function resize() {
-    resFlag = true;
     getScreenWidthHeight();
 
     if(wWidth > svgHeight*curPos.initPicW/curPos.initPicH) {
@@ -99,10 +99,19 @@ function buildSvg() {
     let floor = floorLayer.append('image');
     floor.attr('class', 'currentFloor');
     floor.attr('xlink:href', floorSrc);
+    floor.on('load', () => {
+        console.log('***load');
+        let checkBoxArr = [...document.querySelectorAll('.form-check-input')];
+        checkBoxArr.forEach(box => {
+        setFlagObj[box.id] = box.checked;    
+        box.addEventListener('change', (e) => checkBoxListener(e.target.id, e.target.checked))
+        checkBoxListener(box.id, box.checked);
+        });    
+    })
 
     const zoom = d3
         .zoom()
-        .scaleExtent([0.2, 5])
+        .scaleExtent([0.3, 7])
         .on('zoom', zoomed);
     svg.call(zoom);  
 }  
@@ -161,10 +170,7 @@ function drawSet(itemToShow, isChecked) {
             .attr('y', d => {
                 return (d.y + 115)
             })
-            .on('click', clickedOnPin)         
-
-
-
+            .on('click', clickedOnPin);
         set
             .selectAll('g')        
             .data(set1)
@@ -205,7 +211,6 @@ function drawCover(itemToShow, isChecked) {
 }
 
 function zoomed() {
-
     const {transform} = d3.event;  
     let {k,x,y} = transform;
     let transform2 = d3Transform()
@@ -216,7 +221,6 @@ function zoomed() {
     
     curPos.zoom = {x,y,k};
     curPos.tr = transform2;
-    resFlag = false
 }
 
 
