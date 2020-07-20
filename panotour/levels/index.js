@@ -5,6 +5,7 @@ let setFlagObj = {
     set1: false,
     set2: false
 }
+let resFlag = false;
 let curPos = {
     zoom: {
         x:0,
@@ -52,35 +53,30 @@ function getScreenWidthHeight() {
     headerFooterHeight = header.offsetHeight + footer.offsetHeight;
     wHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    svgHeight = wHeight - headerFooterHeight;
+    svgHeight = wHeight - headerFooterHeight;   
+}
+
+
+function resize() {
+    resFlag = true;
+    getScreenWidthHeight();
 
     if(wWidth > svgHeight*curPos.initPicW/curPos.initPicH) {
         curPos.k = svgHeight/curPos.initPicH;
         curPos.x = (wWidth/curPos.k - curPos.initPicW)/2;
         curPos.y = 0;
-
     } else {
-        curPos.k = wWidth/curPos.initPicW
-        //curPos.x = (wWidth/curPos.k - curPos.initPicW)/2;
+        curPos.k = wWidth/curPos.initPicW;
         curPos.x = 0;
         curPos.y = (wHeight/curPos.k - curPos.initPicH)/5;        
-    }   
-}
-
-
-function resize() {
-    console.log('m', mainLayer.attr('transform'));
-
-    getScreenWidthHeight();
+    }
     container.style.height = `${svgHeight}px`;
     container.style.width = `${wWidth}px`;
 
     if(mainLayer) {
         mainLayer
-        .attr('transform', `scale(${curPos.k}) translate(${curPos.x},${curPos.y})`) 
-    }
-
-    
+            .attr('transform', `translate(${curPos.zoom.x},${curPos.zoom.y}) scale(${curPos.k*curPos.zoom.k}) translate(${curPos.x},${curPos.y})`)
+    }    
 }
 
 function buildSvg() {
@@ -106,7 +102,7 @@ function buildSvg() {
 
     const zoom = d3
         .zoom()
-        .scaleExtent([0.2, 3])
+        .scaleExtent([0.2, 5])
         .on('zoom', zoomed);
     svg.call(zoom);  
 }  
@@ -128,6 +124,25 @@ function checkBoxListener(itemToShow, isChecked) {
 
 function drawSet(itemToShow, isChecked) {
     if (isChecked) {
+        // set = mainLayer.append('g')
+        // set.attr('class', 'set')
+        //     .selectAll('g')        
+        //     .data(set1)
+        //     .join('g')
+        //     .attr('pointer-events', 'visible')
+        //     .attr('cursor', 'pointer')
+        //     .attr('id', d => d.id)
+        //     .append('circle')
+        //         .attr('fill', '#ff0066')
+        //         .attr('cx', d => {
+        //             return d.x
+        //         })
+        //         .attr('cy', d => {
+        //             return (d.y + 165)
+        //         })
+        //         .attr('r', 30)
+        //         .on('click', clickedOnPin)  
+          
         set = mainLayer.append('g')
         set.attr('class', 'set')
             .selectAll('g')        
@@ -136,16 +151,19 @@ function drawSet(itemToShow, isChecked) {
             .attr('pointer-events', 'visible')
             .attr('cursor', 'pointer')
             .attr('id', d => d.id)
-            .append('circle')
-                .attr('fill', '#ff0066')
-                .attr('cx', d => {
-                    return d.x
-                })
-                .attr('cy', d => {
-                    return (d.y + 165)
-                })
-                .attr('r', 30)
-                .on('click', clickedOnPin)        
+            .append('image')
+            .attr('class', 'currentFloor')
+            //.attr('xlink:href', './img/pinR_.svg')
+            .attr('xlink:href', './img/redPIN_.png')
+            .attr('x', d => {
+                return d.x - 25
+            })
+            .attr('y', d => {
+                return (d.y + 110)
+            })
+            .on('click', clickedOnPin)         
+
+
 
         set
             .selectAll('g')        
@@ -159,10 +177,10 @@ function drawSet(itemToShow, isChecked) {
                 return (d.y + 165)
             })
             .attr('text-anchor', 'middle')
-            .attr('font-size', 30)
+            .attr('font-size', 20)
             .attr('fill', 'white')
             .attr('font-family', 'sans-serif')
-            .attr('dy', '10')
+            .attr('dy', '-28')
             .attr('pointer-events', 'none')
             .text(d => d.id);          
     } else {
@@ -186,13 +204,18 @@ function drawCover(itemToShow, isChecked) {
 }
 
 function zoomed() {
+
     const {transform} = d3.event;  
     let {k,x,y} = transform;
-    let transform2 = d3Transform() 
+    let transform2 = d3Transform()
         .translate([x, y])
         .scale(k*curPos.k)
         .translate([curPos.x, curPos.y])
-    mainLayer.attr('transform', transform2);  
+    mainLayer.attr('transform', transform2); 
+    
+    curPos.zoom = {x,y,k};
+    curPos.tr = transform2;
+    resFlag = false
 }
 
 
