@@ -1,37 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
-    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:ns1="http://sozi.baierouge.fr"
-    id="svg3873"
-    sodipodi:docname="map pin.svg"
-    viewBox="0 0 64 64"
-    version="1.1"
-    inkscape:version="0.48.3.1 r9886"
-  >
-  <title
-      id="title2993"
-    >map pin</title
-  >
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3873"
+   sodipodi:docname="pinR.svg"
+   viewBox="0 0 18.8 23.2"
+   version="1.1"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   width="47"
+   height="58"><metadata
+   id="metadata32">
+  <rdf:RDF>
+    <cc:Work
+       rdf:about="">
+      <dc:format>image/svg+xml</dc:format>
+      <dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      <dc:title>map pin</dc:title>
+    </cc:Work>
+  </rdf:RDF>
+</metadata>
+<defs
+   id="defs30" />
+<sodipodi:namedview
+   inkscape:document-rotation="0"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1213"
+   inkscape:window-height="799"
+   id="namedview28"
+   showgrid="false"
+   inkscape:pagecheckerboard="true"
+   showborder="true"
+   inkscape:zoom="12.004475"
+   inkscape:cx="18.898777"
+   inkscape:cy="24.682335"
+   inkscape:window-x="451"
+   inkscape:window-y="59"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="svg3873"
+   width="15px"
+   scale-x="0.4" />
+<title
+   id="title2993">map pin</title>
 
-    <g id="g3841"
-        >
-      <path
-          id="path3047"
-          d="m-995.72 1225.8c-0.2729-0.7794-1.645-6.0275-3.049-11.662-4.441-17.823-12.122-36.988-22.546-56.255-5.9844-11.061-7.0667-12.824-24.551-40-28.252-43.911-33.217-56.241-32.173-79.89 0.9573-21.672 8.2717-37.909 24.149-53.61 13.179-13.032 27.807-20.549 45.601-23.432 44.097-7.1446 86.878 21.883 95.546 64.828 2.0208 10.012 1.5723 27.243-0.95271 36.604-2.77 10.269-13.883 31.045-29.589 55.315-28.348 43.807-39.082 65.687-47.119 96.05-3.1117 11.755-4.3985 14.673-5.3161 12.052z"
-          style="stroke:#5a0000;stroke-width:5.7;fill:#f41922"
-          />
-      
-    </g
-    >
-  >
-  >
-</svg
->
+
+  &gt;
+  &gt;
+<g
+   style="fill:#2b1100"
+   transform="translate(-0.06664164,0.06664185)"
+   id="g92">
+  <path
+     style="fill:#2b1100;fill-rule:evenodd;stroke-width:0.166605"
+     d="M 22.234064,56.967743 C 17.85759,54.647585 11.337241,47.779731 7.0655114,40.990773 3.6667669,35.589229 1.4596654,29.861955 0.76431615,24.639612 0.55963956,23.102412 0.65455493,19.263882 0.93072386,17.909817 2.2397534,11.491605 6.2890632,6.1051987 12.246347,2.8577358 c 7.741305,-4.2199774 17.789621,-3.71942338 25.114009,1.2510472 5.444467,3.6947195 8.829258,9.223186 9.494576,15.507736 0.358412,3.385514 -0.289842,7.789765 -1.776897,12.072286 -1.328903,3.82707 -4.221894,9.103055 -7.162959,13.06319 -4.872065,6.560215 -11.727436,12.715052 -14.181571,12.732387 -0.284907,0.002 -0.959656,-0.230476 -1.499441,-0.516639 z m 4.84973,-22.812254 c 2.073057,-0.63667 3.361896,-1.427358 5.002486,-3.068976 1.141371,-1.142086 1.653602,-1.805875 2.125407,-2.754266 2.937631,-5.905023 0.687586,-12.818149 -5.123546,-15.741772 -3.470787,-1.746179 -7.786109,-1.646363 -11.160726,0.258153 -1.078563,0.608703 -3.077525,2.419427 -3.750063,3.396928 -1.963208,2.853424 -2.619122,6.44543 -1.765949,9.670925 0.932959,3.527137 3.633375,6.542704 7.091884,7.919543 2.221799,0.884502 5.316085,1.014904 7.580507,0.319465 z"
+     id="path86"
+     transform="scale(0.4)" />
+  <ellipse
+     style="fill:#2b1100;fill-rule:evenodd;stroke-width:0.4"
+     id="path88"
+     cx="9.8629885"
+     cy="9.0632868"
+     rx="5.1314197"
+     ry="5.6645541" />
+</g>
+<path
+   sodipodi:nodetypes="cccccccccc"
+   d="M 9.0348383,0.24378553 C 5.4172852,0.34619628 1.9511129,2.7584681 0.83996578,6.0244612 0.48629937,7.0413183 0.35678205,7.8795404 0.36960785,8.9114609 0.3953545,11.346086 1.8809886,15.32486 3.8128394,17.610876 4.489942,18.448416 7.2878987,22.58612 9.4225746,22.555904 11.429207,22.537354 14.35864,18.731267 15.203702,17.415211 17.217821,14.549696 18.579144,11.474785 18.555549,8.8762232 18.656061,5.9968572 16.93803,2.9919398 14.218964,1.4876814 13.501254,1.0732359 12.589208,0.70215637 11.733809,0.50203264 10.908707,0.2978255 9.8645568,0.19784102 9.0348383,0.24378553 Z"
+   style="fill:#d40000;fill-rule:evenodd;stroke-width:0.360133"
+   id="path98" />
+</svg>

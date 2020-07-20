@@ -165,7 +165,7 @@ function drawSet(itemToShow, isChecked) {
             .attr('id', d => d.id)
             .append('image')
             .attr('class', 'currentFloor')
-            .attr('xlink:href', './img/pinR_.svg')
+            .attr('xlink:href', './img/pinR.svg')
             //.attr('xlink:href', './img/redPIN_.png')
             .attr('x', d => {
                 return d.x - 25
@@ -183,13 +183,13 @@ function drawSet(itemToShow, isChecked) {
                 return d.x
             })
             .attr('y', d => {
-                return (d.y + 165)
+                return (d.y + 168)
             })
             .attr('text-anchor', 'middle')
             .attr('font-size', 20)
             .attr('fill', 'white')
             .attr('font-family', 'sans-serif')
-            .attr('dy', '-26')
+            .attr('dy', '-25')
             .attr('dx', '-2')
             .attr('pointer-events', 'none')
             .text(d => d.id);          
