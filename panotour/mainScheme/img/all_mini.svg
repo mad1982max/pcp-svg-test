@@ -19,7 +19,7 @@
       <image
          class = "floor"
          id="image20"
-         xlink:href = "./small_levels3.png" />
+         xlink:href = "./small_levels.png" />
       <a>
          <rect
          pointer-events = "visible"
@@ -36,10 +36,10 @@
          pointer-events = "visible"
          class="block"
          id="level_27"
-         y="217"
+         y="219"
          x="295"
-         width="283"
-         height="168"
+         width="286"
+         height="172"
          style="fill:none;fill-rule:evenodd" />
       </a>
       <a>
@@ -47,10 +47,10 @@
          pointer-events = "visible"
          class="block"
          id="level_37"
-         y="412"
+         y="418"
          x="292"
-         width="283"
-         height="168"
+         width="287"
+         height="169"
          style="fill:none;fill-rule:evenodd" />
       </a>
       <a>
@@ -58,10 +58,10 @@
          pointer-events = "visible"
          class="block"
          id="level_47"
-         y="610"
+         y="618"
          x="289"
-         width="285"
-         height="168"
+         width="288"
+         height="169"
          style="fill:none;fill-rule:evenodd" />
       </a>
    </g>
