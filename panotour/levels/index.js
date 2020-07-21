@@ -109,7 +109,7 @@ function buildSvg() {
     floor.attr('xlink:href', floorSrc)
     mainLayer
     .transition()
-    .duration(500)
+    .duration(700)
     .attr("opacity", "1")
 
     const zoom = d3
@@ -166,7 +166,6 @@ function drawSet(itemToShow, isChecked) {
             .append('image')
             .attr('class', 'currentFloor')
             .attr('xlink:href', './img/pinR.svg')
-            //.attr('xlink:href', './img/redPIN_.png')
             .attr('x', d => {
                 return d.x - 25
             })
